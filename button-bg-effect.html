@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{padding: 0;box-sizing: border-box;
+        margin: 0;}
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+            background-image: linear-gradient(to right, rgb(181, 172, 172) 1px, transparent 1px),
+            linear-gradient(to bottom, rgb(211, 209, 209) 1px, transparent 1px);
+            background-size: 4vh 4vh;
+        }
+        button{
+            padding: 16px 18px;
+            background: transparent;
+            color: rgb(10, 196, 10);
+            border: 1px solid rgb(10, 196, 10);
+            outline: none;
+            transition: all 1s;
+            border-radius: 100px;
+            font-size: 25px;
+            font-weight: 600;
+            font-family: sans-serif;
+            display: block;
+            width: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        button::after{
+            content: '';
+            display:block;
+            height: 300px;
+            width: 500px;
+            background: rgb(10, 196, 10);
+            position: absolute;
+            left: -300px;
+            bottom: -300px;
+            z-index: -999;
+            transform: rotate(40deg);
+            transition: all .5s;
+        }
+        button:hover::after{
+            bottom: -100px;
+            left: -150px;
+        }
+        button:hover{
+            color: white;
+            border: 1px solid rgb(10, 196, 10);
+        }
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <button>Join</button>
+</body>
+</html>
